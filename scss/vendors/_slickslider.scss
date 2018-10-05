@@ -1,0 +1,39 @@
+/**
+*
+* Slick Slider Styles
+*
+*/
+
+// Slider Arrows
+
+.slick-prev:before{
+  //  color: $brand-primary;
+  color: $gray-700;
+  // color: theme-color("primary");
+}
+
+.slick-next:before{
+  color: $gray-700;
+  //  color: $brand-primary;
+  // color: theme-color("primary");
+}
+
+
+
+// Slider Navigation (for Schedule page)
+
+.slider-nav{
+
+  .slick-slide .card{
+    background: #f8f9fa;
+    cursor: pointer;
+  }
+
+  .slick-slide.slick-current .card,
+  .slick-slide:hover .card{
+    background: #fff;
+    text-decoration: none;
+    color: #FF7401;
+  }
+
+}

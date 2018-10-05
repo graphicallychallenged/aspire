@@ -1,0 +1,19 @@
+// Headings
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6{
+    font-family: 'Poppins', sans-serif;
+}
+
+h6, .h6 {
+    font-size: 1.125rem;
+}
+
+// Text Utilities
+.text-muted a{
+  @extend .text-muted;
+}
+
+.text-secondary a{
+  @extend .text-secondary;
+}

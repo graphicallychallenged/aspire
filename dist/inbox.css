@@ -1,0 +1,59 @@
+/* CSS Inbox - Put Hotfixes here and then integrate them into SASS files later */
+
+/* Woocommerce styling makes logo too big; this constrains it */
+.navbar-brand img,
+.woocommerce .navbar-brand img{
+  max-width: 109px !important;
+}
+
+.woocommerce .site-content{
+  /*padding-top: 20px;*/
+}
+
+/* Override Bootstrap styles for Tabs and Tab Panels */
+
+.woocommerce div.product .woocommerce-tabs ul.tabs {
+    list-style: none;
+    padding: 0 0 0 1em;
+    margin: 0 0 0em;
+    overflow: hidden;
+    position: relative;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
+    background: #fafafa;
+    z-index: 2;
+    border-bottom-color: #fafafa;
+}
+
+.woocommerce .panel {
+    margin-bottom: 25px;
+    background-color: #fafafa;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.woocommerce div.product .woocommerce-tabs .panel {
+    padding: 20px 40px;
+}
+
+
+/* Fix padding-related distortion of Sale badge */
+
+.woocommerce span.onsale{
+  padding: 0em;
+  font-size: 1em;
+}
+
+/* Related Products Styles */
+.woocommerce #related-products{
+  border-top: 1px solid #ddd;
+  background-color: #fafafa;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.woocommerce #related-products h3{
+  color: rgba(0,0,0, 0.5);
+}

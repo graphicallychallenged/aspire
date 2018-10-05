@@ -1,0 +1,212 @@
+// Set Z-index on navbars to force them to be on top of the dimmer
+.navbar-main,
+.navbar-aux,
+.navbar-contextual{
+  // z-index: 5;
+}
+
+.navbar-aux{
+  background-color: rgba(0,0,0,0.95);
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+
+  .menu-item{
+    font-size: $font-size-sm;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+}
+
+.navbar-main{
+  background-image: url('../img/aspire-background-v4.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.navbar-contextual{
+  background-color: rgba(0,0,0,0.95);
+}
+
+
+
+// Try to make contextual navbar horizontal scrolling...
+
+// https://benfrain.com/playground/scroller.html
+// https://www.w3schools.com/howto/howto_css_menu_horizontal_scroll.asp
+// https://benfrain.com/a-horizontal-scrolling-navigation-pattern-for-touch-and-mouse-with-moving-current-indicator/
+
+// .navbar-contextual{
+//   /* Make this scrollable when needed */
+//   overflow-x: auto;
+//   /* We don't want vertical scrolling */
+//   overflow-y: hidden;
+//   /* For WebKit implementations, provide inertia scrolling */
+//   -webkit-overflow-scrolling: touch;
+//   /* We don't want internal inline elements to wrap */
+//   white-space: nowrap;
+//
+//   /* If JS present, let's hide the default scrollbar */
+//   .js & {
+//       /* Make an auto-hiding scroller for the 3 people using a IE */
+//       -ms-overflow-style: -ms-autohiding-scrollbar;
+//       /* Remove the default scrollbar for WebKit implementations */
+//       &::-webkit-scrollbar {
+//           display: none;
+//       }
+//   }
+// }
+//
+// .navbar-contextual ul{
+//   float: left;
+//   position: relative;
+// }
+//
+// .navbar-contextual ul li{
+//   display: inline-flex;
+// }
+
+
+
+// Account for WP Admin Bar on mobile
+.sticky-top{
+  .admin-bar &{
+    // top: 32px;
+  }
+}
+
+
+
+// Navbar Overlay
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 10000000;
+    top: 0;
+    // top: 64px; // make menu come out from under existing nav
+    left: 0;
+    // background-color: rgb(0,0,0);
+    // background-color: rgba(0,0,0, 1);
+    background-color: $gray-900;
+    overflow-y: scroll;
+    transition: 0.5s;
+
+    .admin-bar &{
+      // top: 110px;
+      // top: 225px; // account for leaderboard ad
+    }
+
+    @include media-breakpoint-up(lg) {
+      .admin-bar &{
+      //  top: 96px;
+      }
+    }
+
+}
+
+.overlay hr{
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.overlay .text-light{
+  color: rgba(255,255,255,0.7) !important;
+}
+
+.overlay .border-light{
+  border-color: rgba(255,255,255,0.4) !important;
+}
+
+
+.overlay-section{
+  padding-top: $spacer * 0.5;
+  padding-bottom: $spacer * 0.5;
+}
+
+.overlay-section-header{
+  letter-spacing: 0.05rem;
+}
+
+.overlay-content {
+    padding-top: $spacer * 1.0;
+
+    // position: relative;
+    // top: 25%;
+    // width: 100%;
+    // text-align: center;
+    // margin-top: 30px;
+}
+
+.overlay ul.row.overlay-menu{
+  margin-bottom: 0;
+}
+
+
+.overlay a {
+    // padding: 8px;
+    // text-decoration: none;
+    // font-size: 36px;
+    // color: #818181;
+    // display: block;
+    transition: 0.3s;
+    color: rgb(255,255,255);
+    color: rgba(255,255,255, 0.9);
+}
+
+.overlay .nav-link{
+  padding-left: 0;
+}
+
+
+.overlay a:hover, .overlay a:focus {
+    // color: #f1f1f1;
+}
+
+.overlay a.closebtn {
+    position: absolute;
+    top: -0.275rem;
+    right: 15px;
+    font-size: 44px;
+    font-size: 2.8rem;
+    line-height: 1;
+    color: rgb(255,255,255);
+    color: rgba(255,255,255, 0.7);
+    font-weight: $font-weight-light;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {
+    overflow-y: auto;
+  }
+
+  .overlay .closebtn {
+    font-size: 36px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+// Use Bootstrap grid on auto-generated overlay menu markup
+
+.overlay .menu-item{
+  @include make-col-ready();
+  @include make-col(6);
+
+  // @include media-breakpoint-up(lg) {
+  //   @include make-col(4);
+  // }
+}
+
+
+.overlay .search-form{
+  max-width: 100%;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255 ,0.3);
+}
+
+.overlay .search-field{
+  padding: $spacer * 0.5;
+  width: 100%;
+}

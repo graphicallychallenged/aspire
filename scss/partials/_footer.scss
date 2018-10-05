@@ -1,0 +1,99 @@
+// Footer Widget Custom Grid Size Mixins
+#footer {
+
+  background-color: $gray-900;
+//  background-image: url('../img/aspire-bg-footer-tall.jpg');
+  background-image: url('../img/aspire-bg-footer-v2.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  background-size: cover;
+  // padding-top: $spacer * 10;
+  // padding-bottom: $spacer * 10;
+
+  color: $gray-500;
+
+  #custom_html-10 {
+    @include make-col-ready();
+
+    @include media-breakpoint-up(lg) {
+      @include make-col(3);
+    }
+  }
+
+  .widget-title{
+    color: $gray-600;
+    letter-spacing: 0.05rem;
+  }
+
+  .widget a{
+    color: $gray-300;
+  }
+
+  .widget_nav_menu {
+    @include make-col-ready();
+    @include make-col(6);
+
+    @include media-breakpoint-up(md) {
+      @include make-col(3);
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include make-col(2);
+    }
+  }
+
+  #nav_menu-6{
+    @include media-breakpoint-up(lg) {
+      @include make-col-offset(1);
+    }
+  }
+
+
+  .widget_nav_menu .menu{
+    @extend .list-unstyled;
+  }
+
+  .widget_nav_menu .menu .menu-item{
+    margin-bottom: 0.5rem;
+  }
+
+}
+
+
+
+.footer-content{
+  background: rgba(0,0,0, 0.85);
+}
+
+.footer-credits{
+  color: $gray-700;
+  background: rgba(0,0,0, 0.95);
+
+  a{
+    color: $gray-700;
+  }
+
+}
+
+
+
+.footer-search{
+
+  .input-group .form-control{
+    border-color: $white;
+    border-right-color: $gray-300;
+  }
+
+  .input-group-btn .btn{
+    background-color: $gray-200;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    transition-duration: 0;
+
+    &:hover{
+      background-color: theme-color("orange");
+      color: $white;
+    }
+  }
+
+}

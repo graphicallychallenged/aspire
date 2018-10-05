@@ -1,0 +1,96 @@
+// Variables
+$ls_dimmer_opacity: 0.4;
+$ls_nav_opacity: 0.9;
+
+// Contextual Navigation
+.term-eat .navbar-contextual{   background-color: rgba(theme-color("eat"), $ls_nav_opacity); }
+.term-live .navbar-contextual{  background-color: rgba(theme-color("live"), $ls_nav_opacity); }
+.term-shop .navbar-contextual{  background-color: rgba(theme-color("shop"), $ls_nav_opacity); }
+.term-play .navbar-contextual{  background-color: rgba(theme-color("play"), $ls_nav_opacity); }
+.term-dream .navbar-contextual{ background-color: rgba(theme-color("dream"), $ls_nav_opacity); }
+
+.single-seeyourselfhere-eat .navbar-contextual{   background-color: rgba(theme-color("eat"), $ls_nav_opacity); }
+.single-seeyourselfhere-live .navbar-contextual{  background-color: rgba(theme-color("live"), $ls_nav_opacity); }
+.single-seeyourselfhere-shop .navbar-contextual{  background-color: rgba(theme-color("shop"), $ls_nav_opacity); }
+.single-seeyourselfhere-play .navbar-contextual{  background-color: rgba(theme-color("play"), $ls_nav_opacity); }
+.single-seeyourselfhere-dream .navbar-contextual{ background-color: rgba(theme-color("dream"), $ls_nav_opacity); }
+
+
+// Dimmer Customizations
+.term-eat .dimmer{   background-color: rgba(theme-color("eat"), $ls_dimmer_opacity); }
+.term-live .dimmer{  background-color: rgba(theme-color("live"), $ls_dimmer_opacity); }
+.term-shop .dimmer{  background-color: rgba(theme-color("shop"), $ls_dimmer_opacity); }
+.term-play .dimmer{  background-color: rgba(theme-color("play"), $ls_dimmer_opacity); }
+.term-dream .dimmer{ background-color: rgba(theme-color("dream"), $ls_dimmer_opacity); }
+
+// Dimmer Customizations
+.single-post.single-seeyourselfhere-eat .dimmer{   background-color: rgba(theme-color("eat"), $ls_dimmer_opacity); }
+.single-post.single-seeyourselfhere-live .dimmer{  background-color: rgba(theme-color("live"), $ls_dimmer_opacity); }
+.single-post.single-seeyourselfhere-shop .dimmer{  background-color: rgba(theme-color("shop"), $ls_dimmer_opacity); }
+.single-post.single-seeyourselfhere-play .dimmer{  background-color: rgba(theme-color("play"), $ls_dimmer_opacity); }
+.single-post.single-seeyourselfhere-dream .dimmer{ background-color: rgba(theme-color("dream"), $ls_dimmer_opacity); }
+
+
+
+// Border to help with transition
+
+.term-eat .dimmer,
+.term-live .dimmer,
+.term-shop .dimmer,
+.term-play .dimmer,
+.term-dream .dimmer{
+  border-top: 1px solid rgba(0,0,0,0.10);
+}
+
+// Card Customizations
+// Transparent text on card footers
+.card.lifestyle{
+  .card-footer,
+  .card-footer a{
+    color: rgba(255,255,255, 0.6);
+  }
+}
+
+// Vertical-specific colors
+.card.lifestyle.eat{
+  .card-title a{ color: theme-color("eat"); }
+  .card-footer{ background-color: theme-color("eat"); }
+}
+
+.card.lifestyle.live{
+  .card-title a{ color: theme-color("live"); }
+  .card-footer{ background-color: theme-color("live"); }
+}
+
+.card.lifestyle.shop{
+  .card-title a{ color: theme-color("shop"); }
+  .card-footer{ background-color: theme-color("shop"); }
+}
+
+.card.lifestyle.play{
+  .card-title a{ color: theme-color("play"); }
+  .card-footer{ background-color: theme-color("play"); }
+}
+
+.card.lifestyle.dream{
+  .card-title a{ color: theme-color("dream"); }
+  .card-footer{ background-color: theme-color("dream"); }
+}
+
+
+// Page-specific Customizations
+
+// RECIPES
+.page-recipes .dimmer.dimmer,
+.entry-type-cp_recipe .dimmer.dimmer,
+.page-recipes .dimmer.dimmer,
+.single-cp_recipe .dimmer.dimmer{ background-color: rgba(theme-color("eat"), $ls_dimmer_opacity); }
+
+.page-recipes .navbar-contextual,
+.entry-type-cp_recipe .navbar-contextual,
+.page-recipes .navbar-contextual,
+.single-cp_recipe .navbar-contextual { background-color: rgba(theme-color("eat"), $ls_nav_opacity); }
+
+// MARKETPLACE
+.woocommerce .dimmer.dimmer{ background-color: rgba(theme-color("shop"), $ls_dimmer_opacity); }
+.woocommerce .navbar-contextual { background-color: rgba(theme-color("shop"), $ls_nav_opacity); }

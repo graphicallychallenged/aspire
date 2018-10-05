@@ -1,0 +1,32 @@
+{
+  "name": "aspire",
+  "version": "1.0.0",
+  "description": "[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap": "^4.0.0",
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-sourcemaps": "^2.6.1"
+  },
+  "dependencies": {
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-less": "^3.3.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-open": "^2.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.2.1",
+    "gulp-uglify": "^3.0.0",
+    "jquery": "^3.3.1",
+    "path": "^0.12.7",
+    "popper.js": "^1.14.1"
+  }
+}

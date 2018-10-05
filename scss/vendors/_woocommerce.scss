@@ -1,0 +1,33 @@
+.woocommerce .masthead-marketplace a{
+  color: $white;
+  text-decoration: underline;
+}
+
+
+.woocommerce ul.products li.product a img{
+  border: 1px solid #ddd;
+}
+
+// Push card titles to bottom of the overlay
+.woocommerce .card .card-img-overlay{
+  top: auto;
+  z-index: 10;
+}
+
+// Change stacking of Card Decks
+.woocommerce .card-deck {
+  display: flex;
+  flex-direction: column;
+
+  @include media-breakpoint-up(md) {
+    flex-flow: row wrap;
+    margin-right: -$card-deck-margin;
+    margin-left: -$card-deck-margin;
+  }
+}
+
+// Fixing padding issues that only seem to occur on woocommerce pages
+.woocommerce .site-footer .form-control{
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}

@@ -1,0 +1,28 @@
+// Extend existing WP pagination markup to adopt Bootstrap 4 styling
+.posts-navigation {
+//  border-top: 1px solid $gray-300;
+//  padding-top: $spacer;
+}
+
+.pagination{
+  border-top: 1px solid $gray-300;
+  padding-top: $spacer;
+}
+
+
+.posts-navigation .nav-links{
+  @extend .pagination;
+}
+
+.posts-navigation .nav-links > div{
+  @extend .page-item;
+}
+
+.posts-navigation .nav-links > div > a{
+  @extend .page-link;
+}
+
+// Extend page link styles into auto-generated prev/next posts links
+.pagination .page-item > a{
+  @extend .page-link;
+}
